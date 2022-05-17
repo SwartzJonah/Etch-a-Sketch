@@ -4,9 +4,9 @@ main{
 
 #gridContainer{
     display: inline-grid;
-    grid-template-columns: repeat(16, auto);
+    grid-template-columns: repeat(16, auto);*/
     grid-gap: 1px;
-    
+    color: red;
 }
 
 

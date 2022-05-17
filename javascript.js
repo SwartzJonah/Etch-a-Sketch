@@ -1,8 +1,9 @@
 const gridContainer = document.querySelector('#gridContainer');
 const resizeBtn = document.querySelector('#resizeBtn');
 let size = 16;
-
+//document.querySelector('#gridContainer').style.gridTemplateColumns = `repeat(${size}, auto)`;
 function createGrid(size){
+    
     for (let i = 1; i < (size * size) + 1; i++){
         let gridPiece = document.createElement('div');
         gridPiece.classList.add('gridPiece');
@@ -23,11 +24,19 @@ function deleteGrid(){
 
 }
 
+
 createGrid(16);
 
 resizeBtn.addEventListener('click', () => {
-    deleteGrid();
     size = prompt("Please give a new size");
+    size =  parseInt(size);
+    if (size > 100){
+        return alert('please input a number less then 100');
+    } else if (isNaN(size)){
+        return alert('please input a number');
+    } else {
+    deleteGrid();
+    document.querySelector('#gridContainer').style.gridTemplateColumns = `repeat(${size}, auto)`;
     createGrid(size);
-    //gridContainer.style.grid-template-columns(repeat(size, auto));
+    }
 });
