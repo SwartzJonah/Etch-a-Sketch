@@ -1,0 +1,18 @@
+main{
+    text-align: center;
+}
+
+#gridContainer{
+    display: inline-grid;
+    grid-template-columns: repeat(16, auto);
+    grid-gap: 1px;
+    
+}
+
+
+#gridContainer > div {
+    height: 15px;
+    width: 15px;
+    border: 1px solid black;
+    
+}
