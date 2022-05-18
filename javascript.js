@@ -1,16 +1,15 @@
 const gridContainer = document.querySelector('#gridContainer');
 const resizeBtn = document.querySelector('#resizeBtn');
 let size = 16;
-//document.querySelector('#gridContainer').style.gridTemplateColumns = `repeat(${size}, auto)`;
-function createGrid(size){
-    
+
+function createGrid(size){    
     for (let i = 1; i < (size * size) + 1; i++){
         let gridPiece = document.createElement('div');
         gridPiece.classList.add('gridPiece');
-        gridPiece.textContent = `${i}`;
+        //gridPiece.textContent = `${i}`;
         gridContainer.appendChild(gridPiece);
         gridPiece.addEventListener('mouseover', function (e) {
-            e.target.style.background = 'blue';  
+            e.target.style.background = 'black';  
         });
     }
 }
@@ -36,7 +35,7 @@ resizeBtn.addEventListener('click', () => {
         return alert('please input a number');
     } else {
     deleteGrid();
-    document.querySelector('#gridContainer').style.gridTemplateColumns = `repeat(${size}, auto)`;
     createGrid(size);
+    document.querySelector('#gridContainer').style.gridTemplateColumns = `repeat(${size}, auto)`;
     }
 });

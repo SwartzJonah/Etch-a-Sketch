@@ -4,15 +4,19 @@ main{
 
 #gridContainer{
     display: inline-grid;
-    grid-template-columns: repeat(16, auto);*/
-    grid-gap: 1px;
-    color: red;
+    grid-template-columns: repeat(16, auto);
+    padding: 0px;
+    margin: 0px;
+   height: 500px;
+   width: 500px;
 }
 
 
 #gridContainer > div {
-    height: 15px;
-    width: 15px;
+    height: auto;
+    width: auto;
+    padding: 0px;
+    margin: 0px;
     border: 1px solid black;
     
 }
