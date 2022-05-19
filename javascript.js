@@ -12,7 +12,7 @@ let colorState = 'black';
 let grid = true;
 createGrid(16);
 
-//functions
+//Functions
 
 //Makes grid and sets style based 
 function createGrid(size){    
@@ -41,15 +41,14 @@ function createGrid(size){
     }
 }
 
-
 function deleteGrid(){
     const grids = gridContainer.querySelectorAll(`div`);
     grids.forEach(div => {
         div.remove();
     }
         )
-
 }
+
 function randomNumber(max){
     return Math.floor(Math.random() * max);
 }
@@ -67,7 +66,6 @@ function colorChooser(){
     return rgba;    
 }
 
-
 function darken(color){
     let amountGray = (color.slice(-4, -1));
     let newColor =  color.slice(0, -4);
@@ -78,8 +76,7 @@ function darken(color){
         return color;
     } else {
         return color;
-    }
-    
+    }  
 }
 
 //Button Listeners
@@ -125,8 +122,5 @@ toggleLinesBtn.addEventListener('click', () => {
             grid = true;
         }
         deleteGrid();
-        createGrid(size);
-      
+        createGrid(size); 
 })
-        
-      

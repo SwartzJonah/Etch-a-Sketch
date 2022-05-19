@@ -9,9 +9,7 @@ body{
 }
 
 main{
-    
-    text-align: center;
-    
+    text-align: center;   
 }
 
 button{
@@ -25,9 +23,11 @@ button{
     font-weight: bolder;
     font-family: 'Times New Roman', Times, serif
 }
+
 button:active{
     transform: scale(0.9);
 }
+
 h1{
     margin: 15px;
     text-align: center;
@@ -110,7 +110,6 @@ footer{
     padding: 0px;
     margin: 0px;
     border: 1px solid rgba(0,0,0,0.8);
-    
 }
 
 #buttonsDiv{
@@ -122,8 +121,6 @@ footer{
     justify-content: space-evenly;
 }
 #bottomButton{
-    
-    
     padding-top: 50px;
     display: flex;
     justify-content: space-evenly;
