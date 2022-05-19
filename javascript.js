@@ -6,9 +6,10 @@ const blackswapBtn = document.querySelector('#blackswapBtn');
 const incrementBtn = document.querySelector('#incrementBtn');
 const startnewBtn = document.querySelector('#startnewBtn');
 const eraseBtn = document.querySelector('#eraseBtn');
-const removeLinesBtn = document.querySelector('#removeLinesBtn');
+const toggleLinesBtn = document.querySelector('#toggleLinesBtn');
 let size = 16;
 let colorState = 'black';
+let grid = true;
 createGrid(16);
 
 //functions
@@ -20,6 +21,11 @@ function createGrid(size){
         gridPiece.classList.add('gridPiece');
         //gridPiece.textContent = `${i}`;
         gridContainer.appendChild(gridPiece);
+        if (grid === true){
+        gridPiece.style.border = '1px solid rgba(0,0,0,0.8)';
+        } else if (grid === false){
+            gridPiece.style.border = '0px solid rgba(0,0,0,0.8)';
+        }
         gridPiece.style.backgroundColor = 'rgba(0,0,0, 0.01)';
         gridPiece.addEventListener('mouseover', function (e) {
             if (colorState == 'black'){
@@ -58,7 +64,6 @@ function colorChooser(){
     let b = randomNumber(255);
     let a = randomOpacity(5,9)/10;
     let rgba = `rgba(${r},${g},${b},${a})`;
-    console.log(rgba);
     return rgba;    
 }
 
@@ -113,8 +118,14 @@ startnewBtn.addEventListener('click', () => {
     createGrid(size);
 })
 
-removeLinesBtn.addEventListener('click', () => {
-   
+toggleLinesBtn.addEventListener('click', () => {
+    if (grid === true){
+        grid = false;
+        } else if (grid === false){
+            grid = true;
+        }
+        deleteGrid();
+        createGrid(size);
       
 })
         
