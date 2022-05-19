@@ -56,11 +56,13 @@ footer{
 }
 
 #colorswapBtn{
+    border: 2px solid lime;
    background-color: purple;
    color: lime;
 }
 
 #incrementBtn{
+    border: 2px solid black;
     color: black;
     background-color: grey;
 }
@@ -72,11 +74,19 @@ footer{
 #resizeBtn{
     background-color: #6424DB;
     color: #9BDB24;
+    border: 2px solid #9BDB24
 }
 
 #startnewBtn{
     background-color: #6424DB;
     color: #9BDB24;
+    border: 2px solid #9BDB24
+}
+
+#removeLinesBtn{
+    background-color: #6424DB;
+    color: #9BDB24;
+    border: 2px solid #9BDB24;
 }
 
 #gridContainer{
@@ -94,7 +104,7 @@ footer{
     width: auto;
     padding: 0px;
     margin: 0px;
-    border: 1px solid black;
+    border: 1px solid rgba(0,0,0,0.8);
     
 }
 
