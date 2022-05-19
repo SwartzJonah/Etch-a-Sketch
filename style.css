@@ -1,16 +1,41 @@
+body{
+    background: gray;
+    margin: 0px;
+    overflow: hidden;
+}
+
 main{
+    
     text-align: center;
-    padding-top: ;
+    
 }
 
 button{
-    
-    padding: 20px;
-    
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif
 }
 
 h1{
+    margin: 20px;
     text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+hr{
+    border: 5px solid black;
+}
+
+footer{
+    color: white;
+    padding: 12px;
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
 }
 
 #blackswapBtn{
@@ -24,17 +49,31 @@ h1{
 }
 
 #incrementBtn{
+    color: black;
     background-color: grey;
-   color: teal;
+}
+
+#eraseBtn{
+    background: pink;
+}
+
+#resizeBtn{
+    background-color: #6424DB;
+    color: #9BDB24;
+}
+
+#startnewBtn{
+    background-color: #6424DB;
+    color: #9BDB24;
 }
 
 #gridContainer{
     display: inline-grid;
     grid-template-columns: repeat(16, auto);
-    padding-top: 50px;
-    margin: 0px;
    height: 500px;
    width: 500px;
+   border: 7px solid #4d4d4e;
+   background: white;
 }
 
 
@@ -51,10 +90,12 @@ h1{
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: space-evenly;
 }
 #bottomButton{
+    
     text-align: center;
     padding-top: 50px;
     display: flex;
