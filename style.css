@@ -1,11 +1,37 @@
 main{
     text-align: center;
+    padding-top: ;
+}
+
+button{
+    
+    padding: 20px;
+    
+}
+
+h1{
+    text-align: center;
+}
+
+#blackswapBtn{
+    background: black;
+    color: white;
+}
+
+#colorswapBtn{
+   background-color: purple;
+   color: lime;
+}
+
+#incrementBtn{
+    background-color: grey;
+   color: teal;
 }
 
 #gridContainer{
     display: inline-grid;
     grid-template-columns: repeat(16, auto);
-    padding: 0px;
+    padding-top: 50px;
     margin: 0px;
    height: 500px;
    width: 500px;
@@ -20,3 +46,18 @@ main{
     border: 1px solid black;
     
 }
+
+#buttonsDiv{
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#bottomButton{
+    text-align: center;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-evenly
+}
+
