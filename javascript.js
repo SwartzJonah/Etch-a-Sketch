@@ -84,12 +84,12 @@ function darken(color){
 
 //Button Listeners
 resizeBtn.addEventListener('click', () => {
-    size = prompt("Please give a new size");
+    size = prompt("Please Input a New Grid Size");
     size =  parseInt(size);
-    if (size > 100){
-        return alert('please input a number less then 100');
+    if (size > 100 || size < 1){
+        return alert('Only Numbers Between 1 And 99 :D');
     } else if (isNaN(size)){
-        return alert('please input a number');
+        return alert('Only Numbers :(');
     } else {
     deleteGrid();
     createGrid(size);
